@@ -1,0 +1,43 @@
+/* não necessariamente nessa ordem
+id #
+class .
+!important
+*/
+
+body {
+    display: grid;
+    min-height: 100vh;
+    margin: 0;    padding: 0;
+    grid-template-rows: 50px auto 30px;
+    grid-template-columns: 1fr 8fr;
+    grid-template-areas:
+    "topo topo"
+    "menu conteudo"
+    "rodape rodape";
+
+}
+
+.topo{background-color: aqua; grid-area: topo;}
+.container{background-color: burlywood; grid-area: conteudo;}
+.rodape{background-color: coral; grid-area: rodape;}
+.menu{background-color: darkcyan; grid-area: menu;}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+@media (max-width: 1024px){
+    .container img {
+        width:440px
+    }
+}
+
+@media (max-width: 420px){
+    .container img {
+        width:200px
+    }
+
+}
