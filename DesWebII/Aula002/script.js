@@ -1,3 +1,3 @@
 function changeText() {
-    document.getElementById("demo").innerHTML = "O texto foi alterado!";
+    document.getElementById("demo").innerHTML = "VAI ESTUDAR!";
 }
