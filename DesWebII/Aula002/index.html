@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .textoVermelho {
-            color: red;
+        .textoBranco {
+            color: whitesmoke;
         }
     </style>
     <!--link:css-->
@@ -18,7 +18,8 @@
     </header>
 
     <nav class="menu">
-        <strong class="textoVermelho">Teste2</strong>
+        <strong class="textoBranco">Teste2</strong>
+        <button onclick="changeText()">Clique aqui</button>
     </nav>
 
 
@@ -30,7 +31,7 @@
         </div>
         <div>
             <img src="https://cdn.pixabay.com/photo/2014/06/03/19/38/board-361516_960_720.jpg" alt="um quadro verde escrito teste">
-            <h2>Teste 2</h2>
+            <h2 id="demo">Teste 2</h2>
         </div>
         <div>
             <img src="https://cdn.pixabay.com/photo/2014/06/03/19/38/board-361516_960_720.jpg" alt="um quadro verde escrito teste">
@@ -46,5 +47,6 @@
                 alert('Olá mundo');
             }
     </script>
+    <script src="script.js"></script>
 </body>
 </html>
