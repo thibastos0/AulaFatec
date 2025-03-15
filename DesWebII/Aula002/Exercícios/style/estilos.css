@@ -1,0 +1,22 @@
+body {
+    font-size:xx-large;
+    background-color: cornsilk;
+    text-align: justify;
+
+}
+
+input {
+    font-size: xx-large;
+    width: 100px;
+}
+
+textarea {
+    font-size: xx-large;
+}
+/*
+button {
+    font-size: x-large;
+    background-color: white;
+    color: black;
+    border: 2px solid #ded266d1;
+}*/
