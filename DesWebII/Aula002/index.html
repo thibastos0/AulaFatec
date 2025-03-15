@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Web Desing II</title>
     <style>
-        .textoVermelho {
-            color: red;
+        .textoBranco {
+            color: whitesmoke;
         }
     </style>
     <!--link:css-->
@@ -14,11 +14,12 @@
 </head>
 <body>
     <header class="topo">
-        <p style="color: red">Teste!</p> <!-- css inline-->        
+        <p style="color: red">Turma Desenvolvimento Web II</p> <!-- css inline-->        
     </header>
 
     <nav class="menu">
-        <strong class="textoVermelho">Teste2</strong>
+        <strong class="textoBranco">Menu</strong>
+        <button onclick="changeText()">Clique aqui</button>
     </nav>
 
 
@@ -26,15 +27,22 @@
     <div class="container">
         <div onclick="msg()">
             <img src="https://cdn.pixabay.com/photo/2014/06/03/19/38/board-361516_960_720.jpg" alt="um quadro verde escrito teste">
-            <h2>Teste</h2>
+            <h2>Imagem Teste</h2>
         </div>
         <div>
-            <img src="https://cdn.pixabay.com/photo/2014/06/03/19/38/board-361516_960_720.jpg" alt="um quadro verde escrito teste">
-            <h2>Teste 2</h2>
-        </div>
-        <div>
-            <img src="https://cdn.pixabay.com/photo/2014/06/03/19/38/board-361516_960_720.jpg" alt="um quadro verde escrito teste">
-            <h2>Teste 3</h2>
+            <table>
+                <tr>
+                    <td>
+                        <strong>Lista de Exercícios:</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="Exercícios/ex001_convTemp.html" target="_blank">001. Exercício Conversor de Temperatura</a>
+                    </td>
+                </tr>
+            </table>
+            <h2 id="demo">Clique no botão do menu!</h2>
         </div>
     </div>
 
@@ -46,5 +54,6 @@
                 alert('Olá mundo');
             }
     </script>
+    <script src="script.js"></script>
 </body>
 </html>

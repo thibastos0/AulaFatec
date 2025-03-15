@@ -17,8 +17,14 @@ body {
 
 }
 
+p {
+    font-size: 24px;
+    text-align: center;
+    
+}
+
 .topo{background-color: aqua; grid-area: topo;}
-.container{background-color: burlywood; grid-area: conteudo;}
+.container{background-color: rgb(243, 221, 193); padding-top: 20px; grid-area: conteudo;}
 .rodape{background-color: coral; grid-area: rodape;}
 .menu{background-color: darkcyan; grid-area: menu;}
 
