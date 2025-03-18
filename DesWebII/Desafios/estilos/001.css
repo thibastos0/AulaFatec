@@ -1,0 +1,76 @@
+body {
+    display: grid;
+    grid-template-rows: 30px auto 30px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "topo"
+    "container"
+    "rodape";
+}
+.topo {
+    background-color: #5f5c6d;
+    color: beige;
+    grid-area: topo;
+}
+
+.container {
+    display: grid flex;
+    height: 100vh; /*ocupar a tela inteira*/
+    grid-template-rows: auto auto auto;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "container1"
+    "container2"
+    "container3";
+    justify-content: center;
+    align-content: stretch;
+    flex-shrink: 3;
+    background-color: #e9efff;
+}
+
+.container1 {
+    grid-area: container1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+}
+
+.container2 {
+    grid-area: container2;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+}
+
+.container3 {
+    grid-area: container3;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+}
+
+.rodape {
+    background-color: #5f5c6d;
+    grid-area: rodape;
+}
+a {
+    color: beige
+}
+
+button {
+    background-color: #444655;
+    color: #f1f1e6;
+    font-size: 12px;
+    padding: 10px 20px;
+    margin: auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 2024px){
+    .container img {
+        height: 240px;
+        width: 100%;
+    }
+}
