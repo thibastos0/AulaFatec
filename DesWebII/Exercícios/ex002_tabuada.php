@@ -21,6 +21,6 @@ echo tabuada($num);
 </head>
 <body>
     <input type="number" name="num" id="num" placeholder="Digite um número">
-    <button onclick="window.location.href='tabuada.php?num=' + document.getElementById('num').value">Gerar tabuada</button>
+    <button onclick="window.location.href='ex002_tabuada.php?num=' + document.getElementById('num').value">Gerar tabuada</button>
 </body>
 </html>
