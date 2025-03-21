@@ -10,11 +10,12 @@
     <div>
         <p>
             Conversor de Temperatura
-            Crie uma função em JavaScript que converta uma temperatura de Celsius para Fahrenheit. A função deve:
+            Crie uma função em JavaScript que converta uma temperatura de Celsius para Fahrenheit. A função deve:<br>
 
-            Receber um parâmetro numérico representando a temperatura em Celsius Calcular a temperatura equivalente em Fahrenheit Retornar o resultado arredondado para uma casa decimal
+            Receber um parâmetro numérico representando a temperatura em Celsius Calcular a temperatura equivalente em Fahrenheit.<br>
+            Retornar o resultado arredondado para uma casa decimal.<br>
 
-            Lembre-se que a fórmula para converter Celsius para Fahrenheit é: F = (C * 9/5) + 32
+            Lembre-se que a fórmula para converter Celsius para Fahrenheit é: F = (C * 9/5) + 32<br>
         </p>
     </div>
     <div>
@@ -22,16 +23,16 @@
             <label for="celsius">
             Temperatura em Celsius:</label>
             <input id="celsius" name="celsius" type="number" placeholder="0" minlength="1" maxlength="4" autofocus>
-            <button onclick="convTemp()">converter</button>
+            <button onclick="convTemp()" onload="focar()">converter</button>
         </p>
     </div>
-    <div>
+    <div id="resultado">
         <p>
             <label for="fahrenheit">
             Temperatura em Fahrenheit:</label>
             <textarea id="fahrenheit" name="fahrenheit" placeholder="0" minlength="1" maxlength="9" rows="1" cols="5" disabled></textarea>
         </p>
     </div>
+    <script src="js/conversor.js"></script>
 </body>
-<script src="js/conversor.js"></script>
 </html>
