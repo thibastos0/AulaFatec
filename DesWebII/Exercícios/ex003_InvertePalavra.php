@@ -42,5 +42,6 @@ if($palavra != ''){
     } else{
         echo "Digite uma palavra para inverter.";
 }
-
+echo "<hr>";
+echo strrev($palavra); // Função pronta do PHP para inverter strings
 ?>
