@@ -46,22 +46,36 @@
             <input type="hidden" name="action" value="buscar">
             <input type="text" name="buscar" id="buscar">
             <button type="submit">Buscar</button>
+        </form>
     </div>
+    <div>
+        <form method="post" action="003_agendaSimples.php">
+            <h3>Remover Contato</h3>
+            <laber for="remover">Remover</label>
+            <input type="hidden" name="action" value="remover">
+            <input type="text" name="remover" id="remover">
+            <button type="submit">Remover</button>
+        </form>
+    </div>
+</body>
+</html>    
 
     <?php
     session_start();
 
     function adicionarContato() {
-        $nome = $_POST['nome'];
+        // $nome = ucwords(strtolower(trim($_POST['nome']))); // Formata o nome
+        $nome = ucfirst(strtolower($_POST['nome'])); // Formata o nome
         $telefone = $_POST['telefone'];
         $email = $_POST['email'];
 
         $_SESSION['contatos'][$nome] = ['telefone' => $telefone, 'email' => $email];
+        echo "<hr>";
         echo "<p>Contato $nome adicionado com sucesso!</p>";
     }
 
     function listarContatos(){
-        echo "<h4>Contatos</h4>";
+        echo "<h4>Lista de contatos: </h4>";
         if (empty($_SESSION['contatos'])) {
             echo "<p>Nenhum contato cadastrado.</p>";
         } else {
@@ -74,7 +88,31 @@
     }
 
     function buscarContato() {
-        echo "entrou na função buscarContato() <br>";
+        $nome = ucfirst(strtolower($_POST['buscar'])) ?? null;
+        if ($nome) {
+            if (isset($_SESSION['contatos'][$nome])) {
+                $info = $_SESSION['contatos'][$nome];
+                echo "<p>Contato encontrado: $nome => Telefone: {$info['telefone']} / Email: {$info['email']}</p>";
+            } else {
+                echo "<p>Contato '$nome' não encontrado.</p>";
+            }
+        } else {
+            echo "<p>Nome não informado.</p>";
+        }
+    }
+
+    function removerContato(){
+        $nome = ucfirst(strtolower($_POST['remover'])) ?? null;
+        if ($nome) {
+            if (isset($_SESSION['contatos'][$nome])) {
+                unset($_SESSION['contatos'][$nome]);
+                echo "<p>Contato $nome removido com sucesso!</p>";
+            } else {
+                echo "<p>Contato '$nome' não encontrado.</p>";
+            }
+        } else {
+            echo "<p>Nome não informado.</p>";
+        }
     }
     
 
@@ -88,12 +126,21 @@
                 adicionarContato();
                 break;
             case 'listar':
+                echo "<hr>";
                 listarContatos();
                 break;
             case 'buscar':
                 clearstatcache();
+                echo "<hr>";
                 buscarContato();
                 break;
+            case 'remover':
+                clearstatcache();
+                echo "<hr>";
+                removerContato();
+                break;
+            default:
+                echo "Escolha uma opção. <br>";
         }
     }
 
@@ -101,5 +148,3 @@
 
 
     ?>
-</body>
-</html>
