@@ -17,10 +17,75 @@
             <li>Aplique encapsulamento para proteger os dados das contas</li>
         </ol>
         </p>
-    </div> 
+    </div>
+    <hr>
 </body>
 </html>
 
 <?php
+class ContaBancaria{
+    protected $titular;
+    protected $endereco;
+    protected $cep;
+    private $cpf;
+    protected $tipo;
+    const TIPO_CORRENTE = "Corrente";
+    const TIPO_POUPANCA = "Poupança";
+
+    public function __construct($titular, $endereco = [
+        "Rua" => "",
+        "Numero" => "",
+        "Cidade" => "",
+        "Estado" => "",
+                        ], $cep, $cpf) {
+        $this->titular = $titular;
+        $this->endereco = $endereco;
+        $this->cep = $cep;
+        $this->cpf = $cpf;
+    }
+
+    public function exibirDados(){
+        return "Seguem informações pessoais do titular '{$this->titular}': <br>Endereço: Rua {$this->endereco['Rua']}, número {$this->endereco['Numero']}, {$this->endereco['Cidade']}/{$this->endereco['Estado']}. | CEP: {$this->cep}. | CPF: {$this->cpf}. | Tipo de conta: {$this->tipo}.";
+    }
+    
+}
+
+class ContaCorrente extends ContaBancaria{
+    private $numAgencia;
+    private $numConta;
+    private $saldo;
+
+    public function __construct($titular, $endereco, $cep, $cpf, $numAgencia, $numConta, $saldoInicial = 0){
+        parent::__construct($titular, $endereco, $cep, $cpf);
+        $this->numAgencia = $numAgencia;
+        $this->numConta = $numConta;
+        $this->saldo = $saldoInicial;
+        $this->tipo = self::TIPO_CORRENTE;
+    }
+
+}
+
+class ContaPoupanca extends ContaBancaria{
+    private $numAgencia;
+    private $numConta;
+    private $saldo;
+
+    public function __construct($titular, $endereco, $cep, $cpf, $numAgencia, $numConta, $saldoInicial = 0){
+        parent::__construct($titular, $endereco, $cep, $cpf);
+        $this->numAgencia = $numAgencia;
+        $this->numConta = $numConta;
+        $this->saldo = $saldoInicial;
+        $this->tipo = self::TIPO_POUPANCA;
+    }
+}
+
+$cliente1 = new ContaCorrente("Thiago", ["Rua"=>"Dos Bancários", "Numero"=>"1000", "Cidade"=>"Indaiatuba", "Estado"=>"SP"], "12345000", "09876543211", "1234", "56789", 1000);
+$cliente2 = new ContaPoupanca("Ana", ["Rua"=>"Das Flores", "Numero"=>"2000", "Cidade"=>"Campinas", "Estado"=>"SP"], "12345000", "12345678900", "4321", "98765");
+
+echo $cliente1->exibirDados();
+echo "<br>";
+echo "<hr>";
+echo $cliente2->exibirDados();
+echo "<br>";
 
 ?>
