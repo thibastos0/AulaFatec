@@ -1,6 +1,6 @@
 <?php
 class Funcionario{
-    public s$alario;
+    public $salario;
     private $reajuste;
 
     public function __construct($salario, $reajuste = 2){
