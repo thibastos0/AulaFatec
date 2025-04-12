@@ -31,7 +31,8 @@
 <?php
 
 if(!isset($_POST["caixa"])){
-    header("Location: ex007_caixaEletronico.php");
+    die("Dados não informados.");
+    //header("Location: ex007_caixaEletronico.php");
 }   
 
 function sacar($valor){
