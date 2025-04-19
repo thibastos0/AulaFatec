@@ -1,0 +1,128 @@
+Aula008
+https://github.com/felipez3r0/workshop-intro-laravel
+
+Composer para bibiliotecas php
+
+site: https://getcomposer.org/download/
+
+Download Composer Latest: v2.8.8
+To quickly install Composer in the current directory, run the following script in your terminal. To automate the installation, use the guide on installing Composer programmatically.
+
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('sha384', 'composer-setup.php') === 'dac665fdc30fdd8ec78b38b9800061b4150413ff2e3b6f88543c636f7cd84f6db9189d43a81e5503cda447da73c7e5b6') { echo 'Installer verified'.PHP_EOL; } else { echo 'Installer corrupt'.PHP_EOL; unlink('composer-setup.php'); exit(1); }"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+This installer script will simply check some php.ini settings, warn you if they are set incorrectly, and then download the latest composer.phar in the current directory. The 4 lines above will, in order:
+
+Download the installer to the current directory
+Verify the installer SHA-384, which you can also cross-check here
+Run the installer
+Remove the installer
+Most likely, you want to put the composer.phar into a directory on your PATH, so you can simply call composer from any directory (Global install), using for example:
+
+sudo mv composer.phar /usr/local/bin/composer
+For details, see the instructions on how to install Composer globally.
+
+WARNING: Please do not redistribute the install code. It will change with every version of the installer. Instead, please link to this page or check how to install Composer programmatically.
+
+- Foi criado novo projeto fora de AulaFatec/DesWebII
+
+Comandos necessários:
+
+sudo apt install php8.2-xml //instalando xml do PHP
+sudo apt install php8.2-curl //acesso html pelo composer
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - //Adiciona o repositório NodeSource
+sudo apt install -y nodejs
+
+
+composer create-project laravel/laravel:^11.0 primeiroapp //criando projeto
+
+
+php artisan serve //servidor
+composer require laravel/breeze --dev //perfil usuário
+php artisan breeze:install
+	stack> blade
+	no
+	PHPunit
+	
+# Adiciona o repositório NodeSource
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+
+# Instala Node.js e npm
+sudo apt install -y nodejs
+
+npm install
+npm run dev //outro servidor em paralelo
+npm run build //dispensa o comando acima
+
+
+chatGPT
+O erro está bem claro: o Laravel (mais especificamente o pacote laravel/pint) precisa da extensão xml do PHP, e ela não está instalada no seu sistema.
+
+No Debian 12 (com PHP 8.2), você pode resolver isso com o seguinte comando no terminal:
+
+sudo apt install php8.2-xml
+
+composer update
+Ou, se preferir reinstalar as dependências:
+
+composer install
+Isso deve resolver o problema, e seu projeto Laravel deve funcionar normalmente.
+
+
+Você disse:
+preciso instalar o sqlite antes?
+
+
+O ChatGPT disse:
+
+Laravel já vem com suporte nativo ao SQLite, e ele é ótimo para desenvolvimento local.
+
+Para instalar o SQLite no Debian 12:
+Instale o pacote do SQLite:
+
+sudo apt install sqlite3
+Instale a extensão do PHP para SQLite:
+
+sudo apt install php8.2-sqlite3
+Verifique se a extensão foi carregada:
+
+Como usar o SQLite no Laravel:
+Dentro do seu projeto Laravel, crie o arquivo do banco de dados:
+
+touch database/database.sqlite
+Edite o arquivo .env e configure a conexão com SQLite assim:
+
+DB_CONNECTION=sqlite
+DB_DATABASE=/caminho/absoluto/para/seu/projeto/database/database.sqlite
+💡 Exemplo:
+
+env
+DB_DATABASE=/home/usuario/Documentos/VSCode/AulaComposer/primeiroapp/database/database.sqlite
+Ou, mais prático, se você estiver dentro da pasta do projeto:
+
+DB_DATABASE=${PWD}/database/database.sqlite
+Rode as migrations para criar as tabelas iniciais:
+
+php artisan migrate
+
+
+Navegue até a pasta do seu projeto e rode:
+
+npm install
+Isso vai instalar todas as dependências definidas no package.json.
+
+3. Rodar o Vite (build frontend)
+Se estiver em modo desenvolvimento, use:
+
+npm run dev
+Isso inicia o servidor do Vite com hot reload.
+
+Se quiser gerar os arquivos compilados para produção:
+
+npm run build
+💡 Dica final: Enquanto npm run dev estiver rodando, o Laravel Breeze vai servir os assets corretamente. Deixe esse comando rodando em um terminal enquanto desenvolve.
+
+
+cd /home/usuario/Documentos/VSCode/AulaComposer/primeiroapp
+
