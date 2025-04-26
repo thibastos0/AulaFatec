@@ -45,7 +45,8 @@ function parcelar($val){
         return "A entrada é de R$ " . number_format($entrada, 2, ',', '.') . " e as duas prestações são iguais a R$ " . number_format($prestacao, 2, ',', '.') . ".";
     } else {
         return "Não é possível parcelar o valor da mercadoria de acordo com as regras estabelecidas.";
-    }*/
+    }
+        */
 
 }
 
