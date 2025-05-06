@@ -39,11 +39,25 @@ composer create-project laravel/laravel:^11.0 primeiroapp //criando projeto
 
 
 php artisan serve //servidor
+
+composer create-project laravel/laravel nome-do-projeto
+cd nome-do-projeto
+
+
 composer require laravel/breeze --dev //perfil usuário
+php artisan breeze:install
+
 php artisan breeze:install
 	stack> blade
 	no
 	PHPunit
+	
+npm install
+npm run dev
+npm run build //dispensa o comando acima
+php artisan migrate
+
+
 	
 # Adiciona o repositório NodeSource
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
