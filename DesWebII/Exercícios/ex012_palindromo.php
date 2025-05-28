@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="style/estilos.css">
 </head>
 <body>
-    <p>
+    <div>
+        <p>
         <h3>Tudo igual? - PHP</h3>
         Descrição<br>
         Desenvolver uma função em PHP que verifique se uma string é um palíndromo, aplicando conceitos de manipulação de strings e lógica de programação.
@@ -24,7 +25,8 @@
             <li>Deve retornar true se a string for um palíndromo e false caso contrário</li>
             <li>Deve utilizar conceitos de PHP para tipagem adequada</li>
         </ul>
-    </p>
+        </p>
+    </div>
     <div>
         <p>Informe a palavra ou frase:
             <form method="POST" action="ex012_palindromo.php">
