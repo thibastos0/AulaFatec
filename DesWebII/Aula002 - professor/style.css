@@ -1,0 +1,44 @@
+body{
+    display: grid;
+    min-height: 100vh;
+    margin: 0; padding: 0;
+    grid-template-rows: 50px auto 30px;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas:
+    "topo topo"
+    "menu conteudo"
+    "menu rodape";
+}
+
+.topo{background-color: aqua; grid-area: topo;}
+.container{background-color: burlywood; grid-area: conteudo;}
+.rodape{background-color: coral; grid-area: rodape;}
+.menu{background-color: darkcyan; grid-area: menu;}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+@media (min-width: 829px){
+    .container img {
+        width: 150px;
+    }
+
+    body{
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px auto auto 50px;
+        grid-template-areas:
+        "topo"
+        "menu"
+        "conteudo"
+        "rodape";
+    }
+}
+
+@media (min-width: 1024px){
+    .container img {
+        width: 200px;
+    }
+}
