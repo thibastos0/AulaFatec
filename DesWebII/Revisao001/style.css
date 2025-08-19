@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 70px auto auto 50px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "topo"
+    "menulateral"
+    "main"
+    "rodape";
+}
+
+.topo{ 
+    grid-area: topo; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu-topo{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.main{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: main; 
+    gap:20px;
+}
+
+.destaques {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.observacoes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.menu-lateral{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-area: menulateral;
+}
+
+.rodape{ 
+    text-align: center;
+    grid-area: rodape; 
+}
+
+@media (min-width: 760px){
+    body {
+        grid-template-rows: 50px auto 50px;
+        grid-template-columns: 1fr 4fr;
+        grid-template-areas:
+        "topo topo"
+        "menulateral main"
+        "rodape rodape";
+    }
+
+    .topo{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .menu-topo {
+        width: 40%;
+    }
+
+    .destaques, .observacoes {
+        flex-direction: row;
+    }
+}

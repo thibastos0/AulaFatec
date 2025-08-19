@@ -1,0 +1,37 @@
+
+body {
+    background-color: rgb(236, 230, 221);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color:darkblue;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+ul { 
+    list-style-type: square;
+}
+
+li {
+    padding: 5px;
+
+}
+
+button {
+    background-color: darkblue;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 50px;
+    display: block;
+    margin: 0 auto;
+}
+
+button:hover {
+    background-color: blue;
+}
