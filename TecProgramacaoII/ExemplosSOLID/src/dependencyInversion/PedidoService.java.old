@@ -1,0 +1,15 @@
+package dependencyInversion;
+
+public class PedidoService {
+    
+    private PedidoRepository repository;
+
+    public PedidoService(){
+        this.repository = new PedidoRepository();
+    }
+
+    public void processarPedido(Pedido pedido) {
+        // Lógica de processamento do pedido
+        repository.salvarPedido(pedido);
+    }
+}
