@@ -2,15 +2,16 @@ package dependencyInversion;
 
 public class PedidoService {
 
-    private PedidoRepository repository;
+    private Carrinho carrinho;
 
-    public PedidoService(PedidoRepository repository) {
-        this.repository = repository;
+    public PedidoService(Carrinho carrinho) {
+        this.carrinho = carrinho;
     }
 
     public void processarPedido(Pedido pedido) {
         // Lógica para processar o pedido
-        repository.salvarPedido(pedido);
+        System.out.println("Processando pedido: " + pedido.getId() + " com valor: " + pedido.getValor());
+        carrinho.salvarPedido(pedido);
     }
 
 }

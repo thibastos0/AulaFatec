@@ -1,7 +1,11 @@
 package dependencyInversion;
 
-public interface PedidoRepository {
+public class PedidoRepository implements Carrinho {
 
-    void salvarPedido(Pedido pedido);
+    @Override
+    public void salvarPedido(Pedido pedido) {
+        // Lógica para salvar o pedido no banco de dados
+        System.out.println("Pedido " + pedido.getId() + " salvo com sucesso!");
+    }
 
 }
