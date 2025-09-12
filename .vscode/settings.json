@@ -2,7 +2,8 @@
     "java.project.sourcePaths": [
         "TecProgramacaoII/ExercicioSOLID/src",
         "TecProgramacaoII/ExemplosSOLID/src",
-        "DesWebIII/Aula001/testespring/src/main/java/com/fatec/testespring"
+        "DesWebIII/Aula001/testespring/src/main/java/com/fatec/testespring",
+        "TecProgramacaoII/ExemploSingleton/src/exemplos"
     ],
     "java.compile.nullAnalysis.mode": "automatic"
 }
