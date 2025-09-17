@@ -2,8 +2,11 @@
     "java.project.sourcePaths": [
         "TecProgramacaoII/ExercicioSOLID/src",
         "TecProgramacaoII/ExemplosSOLID/src",
-        "DesWebIII/Aula001/testespring/src/main/java/com/fatec/testespring",
-        "TecProgramacaoII/ExemploSingleton/src/exemplos"
+        "TecProgramacaoII/ExemploSingleton/src"
     ],
-    "java.compile.nullAnalysis.mode": "automatic"
+    "java.compile.nullAnalysis.mode": "automatic",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "/home/usuario/Documentos/VSCode/mysql-connector-j-9.3.0/mysql-connector-j-9.3.0.jar"
+    ]
 }
