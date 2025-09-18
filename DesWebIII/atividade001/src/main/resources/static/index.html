@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Autenticar</title>
+</head>
+<body>
+  <h1>Autenticar</h1>
+  <form onsubmit="Autenticar(event)">
+    <label for="nome">Nome:</label><br>
+    <input id="nome" name="name" placeholder="Nome" /><br><br>
+    <label for="email">Email:</label><br>
+    <input id="email" name="email" type="email" placeholder="Email" /><br><br>
+    <button type="submit">Entrar</button>
+  </form>
+
+  <p id="erro" style="color: red;"></p>
+
+  <script>
+    function Autenticar(event) {
+      event.preventDefault();
+      const nome = document.getElementById("nome").value;
+      const email = document.getElementById("email").value;
+      const erro = document.getElementById("erro");
+
+      fetch("http://localhost:8080/autenticacao", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ name: nome, email: email })
+      })
+      .then(res => {
+        if (res.ok) {
+          window.location.href = "/home.html";
+        } else {
+          return res.text().then(texto => erro.textContent = texto);
+        }
+      })
+      .catch(err => {
+        erro.textContent = "Erro de rede.";
+        console.error(err);
+      });
+    }
+  </script>
+</body>
+</html>

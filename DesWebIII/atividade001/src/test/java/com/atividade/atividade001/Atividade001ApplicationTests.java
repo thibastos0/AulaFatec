@@ -1,10 +1,10 @@
-package com.fatec.testespring;
+package com.atividade.atividade001;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TestespringApplicationTests {
+class Atividade001ApplicationTests {
 
 	@Test
 	void contextLoads() {
