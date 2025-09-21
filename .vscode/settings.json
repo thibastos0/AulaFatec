@@ -2,7 +2,8 @@
     "java.project.sourcePaths": [
         "TecProgramacaoII/ExercicioSOLID/src",
         "TecProgramacaoII/ExemplosSOLID/src",
-        "TecProgramacaoII/ExemploSingleton/src"
+        "TecProgramacaoII/ExemploSingleton/src",
+        "TecProgramacaoII/ExemploDecorator/src"
     ],
     "java.compile.nullAnalysis.mode": "automatic",
     "java.project.referencedLibraries": [

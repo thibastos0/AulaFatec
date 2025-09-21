@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>Autenticar</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
   <h1>Autenticar</h1>
@@ -10,10 +12,9 @@
     <input id="nome" name="name" placeholder="Nome" /><br><br>
     <label for="email">Email:</label><br>
     <input id="email" name="email" type="email" placeholder="Email" /><br><br>
+    <p id="erro" style="color: red; margin-bottom: 10px;"></p>
     <button type="submit">Entrar</button>
   </form>
-
-  <p id="erro" style="color: red;"></p>
 
   <script>
     function Autenticar(event) {
