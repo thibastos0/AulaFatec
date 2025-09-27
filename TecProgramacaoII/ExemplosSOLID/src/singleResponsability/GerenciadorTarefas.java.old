@@ -1,0 +1,47 @@
+package singleResponsability;
+
+public class GerenciadorTarefas { 
+
+    public String conectarAPI(){ 
+
+        return "Conectado";
+
+    } 
+
+    public void criarTarefa(){ 
+
+        //... 
+
+    } 
+
+    public void atualizarTarefa(){ 
+
+        //... 
+
+    } 
+
+    public void removerTarefa(){ 
+
+        //... 
+
+    } 
+
+    public void enviarNotificacao(){ 
+
+        //... 
+
+    } 
+
+    public void produzirRelatorio(){ 
+
+        //... 
+
+    } 
+
+    public void enviarRelatorio(){ 
+
+        //... 
+
+    } 
+
+} 

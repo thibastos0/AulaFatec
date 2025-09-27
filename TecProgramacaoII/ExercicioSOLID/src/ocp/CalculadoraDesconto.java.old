@@ -1,0 +1,11 @@
+package ocp;
+
+public class CalculadoraDesconto {
+
+    double calcular(String tipoCliente, double valor) {
+        if (tipoCliente.equals("VIP")) return valor * 0.8;
+        if (tipoCliente.equals("Estudante")) return valor * 0.9;
+        return valor;
+    }
+}
+

@@ -1,0 +1,9 @@
+cons:
+- Concorrência para ambientes multithread
+- Viola o princípio de responsabilidade única
+- escalabilidade
+
+pros:
+- Segurança
+- Um único ponto global de acesso
+- economia de recursos

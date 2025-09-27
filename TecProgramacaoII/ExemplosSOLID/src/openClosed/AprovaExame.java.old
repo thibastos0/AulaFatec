@@ -1,0 +1,25 @@
+package openClosed;
+
+public class AprovaExame {
+
+    public void aprovarSolicitacaoExame(Exame exame) {
+
+        if(exame.tipo == "SANGUE"){
+            if(verificaConficoesExameSangue(exame)) System.out.println("Exame de sangue aprovado.");
+        } else if(exame.tipo == "RAIOX") {
+            if(verificaConficoesRaioX(exame)) System.out.println("Exame de raio X aprovado.");
+        }
+        
+    }
+
+    private boolean verificaConficoesExameSangue() {
+        // Lógica para verificar as condições do exame de sangue
+        return true;
+    }
+
+    private boolean verificaConficoesRaioX() {
+        // Lógica para verificar as condições do exame de raio X
+        return true;
+    }
+
+}
