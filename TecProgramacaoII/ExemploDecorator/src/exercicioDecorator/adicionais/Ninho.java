@@ -5,18 +5,18 @@ import exercicioDecorator.Acai;
 
 public class Ninho extends Decorator {
 
-    public Ninho(Acai acai){
-        super(acai, "Leite Ninho");
+    public Ninho(Acai acai, int quantidade){
+        super(acai, "Leite Ninho", quantidade);
     }
 
     @Override
     public String getDescricao() {
-        return acai.getDescricao() + " com leite ninho";
+        return acai.getDescricao() + " com " + this.quantidade + "x leite ninho";
     }
 
     @Override
-    public double valor() {
-        return acai.valor() + 2.75;
+    public double getPreco() {
+        return acai.getPreco() + (5.00*this.quantidade);
     }
 
 }

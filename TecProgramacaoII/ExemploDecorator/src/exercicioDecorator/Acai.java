@@ -13,6 +13,6 @@ public abstract class Acai {
         return this.descricao;
     }
 
-    public abstract double valor();
+    public abstract double getPreco();
 
 }
