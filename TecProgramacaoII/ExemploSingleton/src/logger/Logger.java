@@ -19,10 +19,19 @@ public class Logger {
     }
 
     public static Logger getInstance(int numIntance){
-        if (instance == null) {
-            instance = new Logger(numIntance);
+
+        // Verifica se a instância já foi criada para evitar sincronização desnecessária
+        Logger result = instance;
+        if (result != null) {
+            return result;
         }
-        return instance;
+
+        synchronized(Logger.class) {
+            if (instance == null) {
+                instance = new Logger(numIntance);
+            }
+            return instance;
+        }
     }
 
     public void log(String message) {
