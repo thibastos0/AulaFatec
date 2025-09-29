@@ -1,0 +1,67 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <title>Site Feteps</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap via WebJars -->
+  <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.2/css/bootstrap.min.css}">
+  
+  <!-- Seu CSS customizado (opcional) -->
+  <!-- <link rel="stylesheet" th:href="@{/css/styles.css}"> -->
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Site Feteps</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Quem Somos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#missao">Missão</a></li>
+          <li class="nav-item"><a class="nav-link" href="#visao">Visão</a></li>
+          <li class="nav-item"><a class="nav-link" href="#valores">Valores</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="mt-5 pt-4">
+    <section id="home" class="p-5 bg-light">
+      <div class="container">
+        <h1>Quem Somos</h1>
+        <p>Conteúdo sobre a Feteps...</p>
+      </div>
+    </section>
+    
+    <section id="missao" class="p-5">
+      <div class="container">
+        <h1>Missão</h1>
+        <p>Nossa missão...</p>
+      </div>
+    </section>
+    
+    <section id="visao" class="p-5 bg-light">
+      <div class="container">
+        <h1>Visão</h1>
+        <p>Nossa visão...</p>
+      </div>
+    </section>
+    
+    <section id="valores" class="p-5">
+      <div class="container">
+        <h1>Valores</h1>
+        <p>Nossos valores...</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- JavaScript via WebJars -->
+  <script th:src="@{/webjars/jquery/3.7.0/jquery.min.js}"></script>
+  <script th:src="@{/webjars/bootstrap/5.3.2/js/bootstrap.bundle.min.js}"></script>
+
+</body>
+</html>
