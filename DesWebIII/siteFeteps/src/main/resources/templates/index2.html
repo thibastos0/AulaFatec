@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="utf-8">
-  <title>LogChain 4.0 - Cadeia Fria Inteligente</title>
+  <title>Site Feteps</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap via WebJars -->
@@ -12,15 +12,102 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
   
   <!-- Estilos customizados -->
-  <link rel="stylesheet" th:href="@{/css/style.css}">
+  <style>
+    /* Scroll suave para toda a página */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Altura mínima para hero section */
+    .min-vh-75 {
+      min-height: 75vh;
+    }
+    
+    /* Carrossel de valores */
+    #valoresCarousel {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    
+    .carousel-item {
+      padding: 2rem 0;
+      min-height: 400px;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 5%;
+      color: #0d6efd;
+    }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: #0d6efd;
+      border-radius: 50%;
+      padding: 20px;
+    }
+    
+    .carousel-indicators button {
+      background-color: #0d6efd;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+    }
+    
+    /* Animações e transições */
+    .card {
+      transition: all 0.3s ease-in-out;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+    }
+    
+    /* Menu ativo */
+    .nav-link.active {
+      background-color: rgba(255,255,255,0.2) !important;
+      border-radius: 20px;
+    }
+    
+    /* Botões com animação */
+    .btn {
+      transition: all 0.3s ease;
+    }
+    
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+    
+    /* Ícones animados */
+    .bi {
+      transition: all 0.3s ease;
+    }
+    
+    /* Seções com padding responsivo */
+    @media (max-width: 768px) {
+      .display-3 {
+        font-size: 2.5rem;
+      }
+      
+      .display-5 {
+        font-size: 2rem;
+      }
+      
+      .py-5 {
+        padding: 3rem 0 !important;
+      }
+    }
+  </style>
+  
+  <!-- Seu CSS customizado (opcional) -->
+  <!-- <link rel="stylesheet" th:href="@{/css/styles.css}"> -->
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <i class="bi bi-thermometer-snow me-2"></i>
-        LogChain 4.0
-      </a>
+      <a class="navbar-brand" href="#">LogChain 4.0</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -53,27 +140,19 @@
 
   <main class="mt-5 pt-4">
     <!-- Hero Section -->
-    <section id="home" class="hero-with-animation min-vh-90 d-flex align-items-center">
-      <!-- Conteúdo principal do Hero -->
+    <section id="home" class="p-5 bg-gradient" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white;">
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-10">
-            <div class="hero-content text-center text-white">
-              <h1 class="display-3 fw-bold mb-4">
-                <i class="bi bi-thermometer-snow text-info me-3"></i>
-                LogChain 4.0
-              </h1>
-              <h2 class="h2 mb-4 text-warning">CADEIA FRIA INTELIGENTE</h2>
-              <p class="lead mb-5 text-light">
-                Revolucionando a logística de alimentos com tecnologia IoT de ponta para 
-                monitoramento em tempo real da cadeia de suprimentos refrigerada
-              </p>
-              <div class="d-flex justify-content-center">
-                <a href="#sobre" class="btn btn-warning btn-lg px-5 py-3 rounded-pill shadow">
-                  <i class="bi bi-arrow-down me-2"></i>Conheça Nossa Solução
-                </a>
-              </div>
-            </div>
+        <div class="row align-items-center min-vh-75">
+          <div class="col-lg-8 mx-auto text-center">
+            <h1 class="display-3 fw-bold mb-4">
+              <i class="bi bi-thermometer-snow text-info me-3"></i>
+              LogChain 4.0
+            </h1>
+            <h2 class="h3 mb-4 text-light">CADEIA FRIA INTELIGENTE</h2>
+            <p class="lead mb-5">Revolucionando a logística de alimentos com tecnologia IoT de ponta</p>
+            <a href="#sobre" class="btn btn-light btn-lg px-5 py-3 rounded-pill shadow">
+              <i class="bi bi-arrow-down me-2"></i>Conheça Nossa Solução
+            </a>
           </div>
         </div>
       </div>
@@ -207,9 +286,9 @@
               <p class="h4 text-dark mb-4">
                 Ser <strong class="text-primary">referência nacional</strong> em soluções inteligentes de 
                 monitoramento de temperatura, impulsionando e contribuindo para um futuro 
-                <strong class="text-warning">mais seguro</strong>, 
+                <strong class="text-success">mais seguro</strong>, 
                 <strong class="text-info">eficiente</strong> e 
-                <strong class="text-success">sustentável</strong>
+                <strong class="text-warning">sustentável</strong>
               </p>
               <div class="d-flex align-items-center mt-4">
                 <div class="bg-gradient rounded-circle p-3 me-3" style="background: linear-gradient(45deg, #007bff, #6610f2);">
@@ -232,7 +311,7 @@
               </div>
               <div class="col-6 mb-4">
                 <div class="text-center p-4 bg-white rounded-3 shadow-sm h-100">
-                  <div class="bg-warning text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                  <div class="bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
                     <i class="bi bi-shield-check-fill"></i>
                   </div>
                   <h5>Segurança</h5>
@@ -440,7 +519,7 @@
   <script th:src="@{/webjars/jquery/3.7.0/jquery.min.js}"></script>
   <script th:src="@{/webjars/bootstrap/5.3.2/js/bootstrap.bundle.min.js}"></script>
 
-  <!-- Scripts da animação e navegação -->
+  <!-- Script para scroll suave -->
   <script>
     // Scroll suave para os links de navegação
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -476,8 +555,7 @@
         }
       });
     });
-
-
   </script>
+
 </body>
 </html>

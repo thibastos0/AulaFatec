@@ -2,66 +2,482 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="utf-8">
-  <title>Site Feteps</title>
+  <title>LogChain 4.0 - Cadeia Fria Inteligente</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap via WebJars -->
   <link rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.2/css/bootstrap.min.css}">
   
-  <!-- Seu CSS customizado (opcional) -->
-  <!-- <link rel="stylesheet" th:href="@{/css/styles.css}"> -->
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
+  <!-- Estilos customizados -->
+  <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Site Feteps</a>
+      <a class="navbar-brand" href="#">
+        <i class="bi bi-thermometer-snow me-2"></i>
+        LogChain 4.0
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item"><a class="nav-link" href="#home">Quem Somos</a></li>
-          <li class="nav-item"><a class="nav-link" href="#missao">Missão</a></li>
-          <li class="nav-item"><a class="nav-link" href="#visao">Visão</a></li>
-          <li class="nav-item"><a class="nav-link" href="#valores">Valores</a></li>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link px-3" href="#home">
+              <i class="bi bi-info-circle-fill me-1"></i>Quem Somos
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="#missao">
+              <i class="bi bi-target me-1"></i>Missão
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="#visao">
+              <i class="bi bi-eye-fill me-1"></i>Visão
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="#valores">
+              <i class="bi bi-heart-fill me-1"></i>Valores
+            </a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
   <main class="mt-5 pt-4">
-    <section id="home" class="p-5 bg-light">
+    <!-- Hero Section -->
+    <section id="home" class="hero-with-animation min-vh-90 d-flex align-items-center">
+      <!-- Conteúdo principal do Hero -->
       <div class="container">
-        <h1>Quem Somos</h1>
-        <p>Conteúdo sobre a Feteps...</p>
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="hero-content text-center text-white">
+              <h1 class="display-3 fw-bold mb-4">
+                <i class="bi bi-thermometer-snow text-info me-3"></i>
+                LogChain 4.0
+              </h1>
+              <h2 class="h2 mb-4 text-warning">CADEIA FRIA INTELIGENTE</h2>
+              <p class="lead mb-5 text-light">
+                Revolucionando a logística de alimentos com tecnologia IoT de ponta para 
+                monitoramento em tempo real da cadeia de suprimentos refrigerada
+              </p>
+              <div class="d-flex justify-content-center">
+                <a href="#sobre" class="btn btn-warning btn-lg px-5 py-3 rounded-pill shadow">
+                  <i class="bi bi-arrow-down me-2"></i>Conheça Nossa Solução
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre o Projeto -->
+    <section id="sobre" class="py-5 bg-light">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <h2 class="text-center mb-5">
+              <i class="bi bi-info-circle-fill text-primary me-2"></i>
+              Sobre o Projeto
+            </h2>
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="card border-0 shadow-sm h-100">
+                  <div class="card-body p-4">
+                    <h4 class="card-title text-primary mb-3">
+                      <i class="bi bi-cpu-fill me-2"></i>Tecnologia IoT Avançada
+                    </h4>
+                    <p class="card-text">Aplicação de tecnologias da Indústria 4.0 com Internet das Coisas (IoT) para monitoramento em tempo real da cadeia de suprimentos refrigerada.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div class="card border-0 shadow-sm h-100">
+                  <div class="card-body p-4">
+                    <h4 class="card-title text-success mb-3">
+                      <i class="bi bi-shield-check me-2"></i>Conformidade Garantida
+                    </h4>
+                    <p class="card-text">Solução desenvolvida para atender às normas sanitárias da ANVISA e ABNT, garantindo máxima segurança alimentar.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-center mt-4">
+              <p class="lead">
+                <strong>Especializado em produtos lácteos</strong> como sorvetes e manteiga, nosso sistema utiliza 
+                <span class="text-primary">sensores ESP32 com Wi-Fi</span> para monitoramento contínuo, 
+                interface web intuitiva e <span class="text-success">alertas automáticos via Telegram</span>.
+              </p>
+              <div class="row mt-5">
+                <div class="col-md-4 text-center mb-3">
+                  <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                    <i class="bi bi-thermometer-half" style="font-size: 2rem;"></i>
+                  </div>
+                  <h5>Monitoramento 24/7</h5>
+                  <p class="text-muted">Controle contínuo de temperatura</p>
+                </div>
+                <div class="col-md-4 text-center mb-3">
+                  <div class="bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                    <i class="bi bi-bell-fill" style="font-size: 2rem;"></i>
+                  </div>
+                  <h5>Alertas Inteligentes</h5>
+                  <p class="text-muted">Notificações automáticas instantâneas</p>
+                </div>
+                <div class="col-md-4 text-center mb-3">
+                  <div class="bg-info text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 80px; height: 80px;">
+                    <i class="bi bi-graph-up" style="font-size: 2rem;"></i>
+                  </div>
+                  <h5>Redução de Perdas</h5>
+                  <p class="text-muted">Minimização de desperdícios</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     
-    <section id="missao" class="p-5">
+    <!-- Seção Missão -->
+    <section id="missao" class="py-5 bg-white">
       <div class="container">
-        <h1>Missão</h1>
-        <p>Nossa missão...</p>
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-center">
+            <h2 class="display-5 fw-bold mb-4">
+              <i class="bi bi-target text-primary me-3"></i>Nossa Missão
+            </h2>
+            <div class="card border-0 shadow-lg">
+              <div class="card-body p-5">
+                <blockquote class="blockquote mb-0">
+                  <p class="lead fs-4 text-dark mb-4">
+                    "Desenvolver <strong class="text-primary">soluções inteligentes</strong> de monitoramento de temperatura que garantam 
+                    <strong class="text-success">qualidade, segurança e eficiência</strong> em toda a cadeia logística, 
+                    promovendo <strong class="text-info">inovação e confiabilidade</strong> para nossos clientes e para a sociedade."
+                  </p>
+                </blockquote>
+                <div class="row mt-4">
+                  <div class="col-md-3 mb-3">
+                    <div class="text-primary">
+                      <i class="bi bi-check-circle-fill fs-1"></i>
+                    </div>
+                    <h6 class="mt-2">Qualidade</h6>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <div class="text-success">
+                      <i class="bi bi-shield-fill-check fs-1"></i>
+                    </div>
+                    <h6 class="mt-2">Segurança</h6>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <div class="text-info">
+                      <i class="bi bi-lightning-fill fs-1"></i>
+                    </div>
+                    <h6 class="mt-2">Eficiência</h6>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <div class="text-warning">
+                      <i class="bi bi-lightbulb-fill fs-1"></i>
+                    </div>
+                    <h6 class="mt-2">Inovação</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     
-    <section id="visao" class="p-5 bg-light">
+    <!-- Seção Visão -->
+    <section id="visao" class="py-5" style="background: linear-gradient(45deg, #f8f9fa 0%, #e9ecef 100%);">
       <div class="container">
-        <h1>Visão</h1>
-        <p>Nossa visão...</p>
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-5 mb-lg-0">
+            <h2 class="display-5 fw-bold mb-4">
+              <i class="bi bi-eye-fill text-success me-3"></i>Nossa Visão
+            </h2>
+            <div class="bg-white p-5 rounded-3 shadow-lg">
+              <p class="h4 text-dark mb-4">
+                Ser <strong class="text-primary">referência nacional</strong> em soluções inteligentes de 
+                monitoramento de temperatura, impulsionando e contribuindo para um futuro 
+                <strong class="text-warning">mais seguro</strong>, 
+                <strong class="text-info">eficiente</strong> e 
+                <strong class="text-success">sustentável</strong>
+              </p>
+              <div class="d-flex align-items-center mt-4">
+                <div class="bg-gradient rounded-circle p-3 me-3" style="background: linear-gradient(45deg, #007bff, #6610f2);">
+                  <i class="bi bi-award-fill text-white fs-4"></i>
+                </div>
+                <span class="text-muted">Liderança em tecnologia para cadeia fria</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="row">
+              <div class="col-6 mb-4">
+                <div class="text-center p-4 bg-white rounded-3 shadow-sm h-100">
+                  <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                    <i class="bi bi-trophy-fill"></i>
+                  </div>
+                  <h5>Referência</h5>
+                  <p class="text-muted small">Nacional em IoT</p>
+                </div>
+              </div>
+              <div class="col-6 mb-4">
+                <div class="text-center p-4 bg-white rounded-3 shadow-sm h-100">
+                  <div class="bg-warning text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                    <i class="bi bi-shield-check-fill"></i>
+                  </div>
+                  <h5>Segurança</h5>
+                  <p class="text-muted small">Máxima confiabilidade</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="text-center p-4 bg-white rounded-3 shadow-sm h-100">
+                  <div class="bg-info text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                    <i class="bi bi-speedometer2"></i>
+                  </div>
+                  <h5>Eficiência</h5>
+                  <p class="text-muted small">Otimização total</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="text-center p-4 bg-white rounded-3 shadow-sm h-100">
+                  <div class="bg-success text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                    <i class="bi bi-leaf-fill"></i>
+                  </div>
+                  <h5>Sustentável</h5>
+                  <p class="text-muted small">Futuro verde</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     
-    <section id="valores" class="p-5">
+    <!-- Seção Valores -->
+    <section id="valores" class="py-5 bg-white">
       <div class="container">
-        <h1>Valores</h1>
-        <p>Nossos valores...</p>
+        <div class="text-center mb-5">
+          <h2 class="display-5 fw-bold mb-3">
+            <i class="bi bi-heart-fill text-danger me-3"></i>Nossos Valores
+          </h2>
+          <p class="lead text-muted">Os princípios que norteiam nossa atuação no mercado</p>
+        </div>
+        
+        <!-- Carrossel de Valores -->
+        <div id="valoresCarousel" class="carousel slide" data-bs-ride="carousel">
+          <!-- Indicadores -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#valoresCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#valoresCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#valoresCarousel" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#valoresCarousel" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#valoresCarousel" data-bs-slide-to="4"></button>
+            <button type="button" data-bs-target="#valoresCarousel" data-bs-slide-to="5"></button>
+          </div>
+
+          <!-- Slides -->
+          <div class="carousel-inner">
+            <!-- Slide 1: Inovação -->
+            <div class="carousel-item active">
+              <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                  <div class="card h-100 shadow-lg border-0">
+                    <div class="card-body text-center p-5">
+                      <div class="mb-4">
+                        <i class="bi bi-lightbulb-fill text-warning" style="font-size: 4rem;"></i>
+                      </div>
+                      <h3 class="card-title text-primary mb-3">Inovação</h3>
+                      <p class="card-text lead">Buscamos constantemente novas tecnologias para transformar a gestão da cadeia de frio, mantendo-nos na vanguarda das soluções inteligentes.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2: Confiabilidade -->
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                  <div class="card h-100 shadow-lg border-0">
+                    <div class="card-body text-center p-5">
+                      <div class="mb-4">
+                        <i class="bi bi-shield-check-fill text-success" style="font-size: 4rem;"></i>
+                      </div>
+                      <h3 class="card-title text-primary mb-3">Confiabilidade</h3>
+                      <p class="card-text lead">Entregamos dados precisos e seguros, essenciais para decisões estratégicas que impactam diretamente o sucesso dos nossos clientes.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3: Sustentabilidade -->
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                  <div class="card h-100 shadow-lg border-0">
+                    <div class="card-body text-center p-5">
+                      <div class="mb-4">
+                        <i class="bi bi-leaf-fill text-success" style="font-size: 4rem;"></i>
+                      </div>
+                      <h3 class="card-title text-primary mb-3">Sustentabilidade</h3>
+                      <p class="card-text lead">Atuamos para reduzir desperdício e impactos ambientais na logística, contribuindo para um futuro mais sustentável.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4: Eficiência -->
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                  <div class="card h-100 shadow-lg border-0">
+                    <div class="card-body text-center p-5">
+                      <div class="mb-4">
+                        <i class="bi bi-graph-up-arrow text-info" style="font-size: 4rem;"></i>
+                      </div>
+                      <h3 class="card-title text-primary mb-3">Eficiência</h3>
+                      <p class="card-text lead">Priorizamos soluções que otimizem tempo, custos e recursos dos nossos clientes, maximizando resultados com menor desperdício.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 5: Transparência -->
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                  <div class="card h-100 shadow-lg border-0">
+                    <div class="card-body text-center p-5">
+                      <div class="mb-4">
+                        <i class="bi bi-eye-fill text-primary" style="font-size: 4rem;"></i>
+                      </div>
+                      <h3 class="card-title text-primary mb-3">Transparência</h3>
+                      <p class="card-text lead">Mantemos relações éticas e de confiança com parceiros e usuários, baseadas na honestidade e clareza em todas as nossas ações.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 6: Foco no Cliente -->
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                  <div class="card h-100 shadow-lg border-0">
+                    <div class="card-body text-center p-5">
+                      <div class="mb-4">
+                        <i class="bi bi-people-fill text-danger" style="font-size: 4rem;"></i>
+                      </div>
+                      <h3 class="card-title text-primary mb-3">Foco no Cliente</h3>
+                      <p class="card-text lead">Criamos soluções personalizadas para atender às reais necessidades do mercado, colocando o cliente no centro de tudo que fazemos.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controles de navegação -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#valoresCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#valoresCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+            <span class="visually-hidden">Próximo</span>
+          </button>
+        </div>
       </div>
     </section>
   </main>
+
+  <!-- Rodapé -->
+  <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h5 class="mb-2">
+            <i class="bi bi-thermometer-snow text-info me-2"></i>
+            LogChain 4.0
+          </h5>
+          <p class="text-muted mb-0">Cadeia Fria Inteligente - Tecnologia IoT para Logística</p>
+        </div>
+        <div class="col-md-6 text-md-end mt-3 mt-md-0">
+          <p class="text-muted mb-0">
+            <i class="bi bi-calendar-event me-2"></i>
+            © 2025 - Inovação em Monitoramento de Temperatura
+          </p>
+          <div class="mt-2">
+            <span class="badge bg-primary me-2">
+              <i class="bi bi-wifi me-1"></i>IoT
+            </span>
+            <span class="badge bg-success me-2">
+              <i class="bi bi-thermometer me-1"></i>Temperatura
+            </span>
+            <span class="badge bg-info">
+              <i class="bi bi-shield-check me-1"></i>Segurança
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 
   <!-- JavaScript via WebJars -->
   <script th:src="@{/webjars/jquery/3.7.0/jquery.min.js}"></script>
   <script th:src="@{/webjars/bootstrap/5.3.2/js/bootstrap.bundle.min.js}"></script>
 
+  <!-- Scripts da animação e navegação -->
+  <script>
+    // Scroll suave para os links de navegação
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+
+    // Destaque do menu ativo durante scroll
+    window.addEventListener('scroll', function() {
+      let current = '';
+      const sections = document.querySelectorAll('section');
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (scrollY >= (sectionTop - 200)) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) {
+          link.classList.add('active');
+        }
+      });
+    });
+
+
+  </script>
 </body>
 </html>

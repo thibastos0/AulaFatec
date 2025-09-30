@@ -1,0 +1,106 @@
+/* Estilos customizados para LogChain 4.0 */
+
+/* Scroll suave para toda a página */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Altura mínima para hero section */
+.min-vh-90 {
+  min-height: 90vh;
+}
+
+/* Hero Section com gradiente */
+.hero-with-animation {
+  position: relative;
+  background: linear-gradient(135deg, #0f1724 0%, #061023 50%, #667eea 100%);
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  background: rgba(15, 23, 36, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 3rem;
+  margin: 2rem 0;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Carrossel de valores */
+#valoresCarousel {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.carousel-item {
+  padding: 2rem 0;
+  min-height: 400px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  color: #0d6efd;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #0d6efd;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.carousel-indicators button {
+  background-color: #0d6efd;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+/* Animações e transições */
+.card {
+  transition: all 0.3s ease-in-out;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15) !important;
+}
+
+/* Menu ativo */
+.nav-link.active {
+  background-color: rgba(255,255,255,0.2) !important;
+  border-radius: 20px;
+}
+
+/* Botões com animação */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 2rem 1.5rem;
+    margin: 1rem;
+  }
+  
+  .display-3 {
+    font-size: 2.5rem;
+  }
+  
+  .display-5 {
+    font-size: 2rem;
+  }
+  
+  .py-5 {
+    padding: 3rem 0 !important;
+  }
+}
