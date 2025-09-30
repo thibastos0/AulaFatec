@@ -31,7 +31,7 @@ public class UsuarioController {
 
     @GetMapping("/novo")
     public String mostrarFormularioCadastro(Model model) {
-        model.addAttribute("usuarios", new Usuario());
+        model.addAttribute("usuario", new Usuario());
         return "formulario";
     }
     
@@ -51,7 +51,7 @@ public class UsuarioController {
     @GetMapping("/excluir/{id}")
     public String excluirUsuario(@PathVariable Long id) {
         usuarioService.excluir(id);
-        return "redirect:/suarios";
+        return "redirect:/usuarios";
     }
     
     
