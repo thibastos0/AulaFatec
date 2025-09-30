@@ -6,6 +6,7 @@ import com.examplo.cadastro_usuarios.model.Usuario;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 
-    
+//    @Query("SELECT COALESCE(MAX(u.id), 0) FROM Usuario u")
+//    Long findMaxId();
 
 }
