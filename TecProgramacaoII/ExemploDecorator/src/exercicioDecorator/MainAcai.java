@@ -21,6 +21,9 @@ public class MainAcai {
         acai400ml = new Banana(acai400ml, 2);
         System.out.println(acai400ml.getDescricao() + ": R$" + acai400ml.getPreco());
 
+        Acai acai700ml = new Acai700ml();
+        System.out.println(acai700ml.getDescricao() + ": R$" + acai700ml.getPreco());
+
     }
 
 }
