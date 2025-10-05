@@ -1,0 +1,132 @@
+/* ============================================
+   SISTEMA DE ACESSO - CSS PRINCIPAL
+   Bootstrap WebJars + Customizações Mínimas
+   
+   ESTRUTURA DE TEMPLATES:
+   - index.html                    (página pública inicial)
+   - /home/home.html              (dashboard principal)
+   - /home/usuarios/listar.html   (listagem de usuários)
+   - /home/usuarios/editar.html   (formulário de usuário)
+   ============================================ */
+
+/* ====== CONFIGURAÇÕES GLOBAIS ====== */
+:root {
+    --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --secondary-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    --form-gradient: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+    --glass-bg: rgba(255, 255, 255, 0.95);
+    --shadow-light: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0 20px 40px rgba(0, 0, 0, 0.15);
+    --border-radius: 20px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    transition: var(--transition);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ====== EFEITO GLASS REUTILIZÁVEL ====== */
+.glass-effect {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+}
+
+/* ====== BACKGROUNDS POR PÁGINA ====== */
+.login-page {
+    background: var(--primary-gradient);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-page {
+    background: var(--primary-gradient);
+    min-height: 100vh;
+}
+
+.usuarios-page {
+    background: var(--secondary-gradient);
+    min-height: 100vh;
+}
+
+.formulario-page {
+    background: var(--form-gradient);
+    min-height: 100vh;
+}
+
+/* ====== MELHORIAS BOOTSTRAP ====== */
+.card {
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-medium);
+    transition: var(--transition);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+    border-radius: 10px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.form-control:focus {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.table-responsive {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* ====== NAVBAR MELHORADA ====== */
+.navbar {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2rem;
+    }
+    
+    .btn-lg {
+        padding: 0.75rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        margin: 1rem;
+    }
+    
+    .btn-action {
+        display: block;
+        margin: 0.125rem 0;
+        width: 100%;
+    }
+}
