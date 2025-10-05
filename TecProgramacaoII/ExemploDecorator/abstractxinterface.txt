@@ -1,0 +1,2 @@
+uma classe pode implemetar mais de uma interface, mas herdar apenas uma abstrata.
+abstract pode implementar os métodos 
