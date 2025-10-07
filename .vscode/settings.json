@@ -3,7 +3,8 @@
         "TecProgramacaoII/ExercicioSOLID/src",
         "TecProgramacaoII/ExemplosSOLID/src",
         "TecProgramacaoII/ExemploSingleton/src",
-        "TecProgramacaoII/ExemploDecorator/src"
+        "TecProgramacaoII/ExemploDecorator/src",
+        "TecProgramacaoII/ExemploAdapter/src"
     ],
     "java.compile.nullAnalysis.mode": "automatic",
     "java.project.referencedLibraries": [
