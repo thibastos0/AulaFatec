@@ -3,7 +3,7 @@ import exemploAdapter.service.ITextPDFAdapter;
 import exemploAdapter.service.OpenPDFAdapter;
 import exemploAdapter.service.SalesReportGenerator;
 
-public class App {
+public class MainPDF {
     public static void main(String[] args) throws Exception {
         //System.out.println("Hello, World!");
         OpenPDFAdapter pdfAdapter = new OpenPDFAdapter();
