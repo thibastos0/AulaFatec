@@ -9,14 +9,18 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.mongoapp.model.User;
 import com.example.mongoapp.service.UserService;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+
 
 
 @RestController
-@RequestMapping("/users")
+@RequestMapping("/user")
 public class UserController {
 
     @Autowired
@@ -35,6 +39,16 @@ public class UserController {
     @PostMapping("/salvar")
     public User salvar(@RequestBody User usuario){
         return userService.salvar(usuario);
+    }
+
+    @PutMapping("/{id}")
+    public User atualizaUser(@PathVariable String id, @RequestBody User user) {
+        return userService.atualizar(id, user);
+    }
+
+    @DeleteMapping("/{id}")
+    public void deletarUser(@PathVariable String id){
+        userService.deletar(id);
     }
 
 }

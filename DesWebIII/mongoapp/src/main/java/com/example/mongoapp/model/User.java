@@ -2,7 +2,7 @@ package com.example.mongoapp.model;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection="users")
+@Document(collection="user")
 public class User {
 
     private String id;
