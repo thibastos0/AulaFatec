@@ -1,7 +1,7 @@
 // MongoApp - User Management JavaScript
 class UserManager {
     constructor() {
-        this.apiUrl = "http://localhost:8080/user";
+        this.apiUrl = "http://localhost:8080/mongoapp/user";
         this.form = document.getElementById("userForm");
         this.table = document.getElementById("userTable");
         this.init();

@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/mongoapp/user")
 public class UserController {
 
     @Autowired
