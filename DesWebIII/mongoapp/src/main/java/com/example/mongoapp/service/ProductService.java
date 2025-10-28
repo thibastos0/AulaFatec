@@ -14,29 +14,29 @@ import com.example.mongoapp.repository.ProductRepository;
 public class ProductService {
 
     @Autowired
-    private ProductRepository productReposidory;
+    private ProductRepository productRepository;
 
     public List<Product> listarTodos(){
-        return productReposidory.findAll();        
+        return productRepository.findAll();        
     }
 
     public Optional<Product> buscarPorId(String id){
-        return productReposidory.findById(id);
+        return productRepository.findById(id);
     }
 
     public Product salvar(Product product){
-        return productReposidory.save(product);
+        return productRepository.save(product);
     }
 
     public Product atualizar(String id, Product productAtualizado){
-        Optional<Product> productExistente = productReposidory.findById(id);
+        Optional<Product> productExistente = productRepository.findById(id);
         if(productExistente.isPresent()){
             Product product = productExistente.get();
             product.setName(productAtualizado.getName());
             product.setDescription(productAtualizado.getDescription());
             product.setPrice(productAtualizado.getPrice());
             product.setQuantity(productAtualizado.getQuantity());
-            return productReposidory.save(product);
+            return productRepository.save(product);
 
         } else {
             throw new RuntimeException("Produto não encontrado com o id: " + id);
@@ -45,7 +45,7 @@ public class ProductService {
     }
 
     public void deletar(String id){
-        productReposidory.deleteById(id);
+        productRepository.deleteById(id);
     }
 
 }
