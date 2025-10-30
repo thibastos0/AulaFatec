@@ -3,7 +3,6 @@ package com.atividade002.acessoSistema.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 
 import com.atividade002.acessoSistema.model.Usuario;
