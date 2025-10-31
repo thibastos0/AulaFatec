@@ -4,8 +4,9 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-# inserindo o properties para ocultar a senha
-application.properties
+# inserindo para ocultar a senha
+# application.properties
+.env
 
 ### STS ###
 .apt_generated

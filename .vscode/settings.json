@@ -4,7 +4,8 @@
         "TecProgramacaoII/ExemplosSOLID/src",
         "TecProgramacaoII/ExemploSingleton/src",
         "TecProgramacaoII/ExemploDecorator/src",
-        "TecProgramacaoII/ExemploAdapter/src"
+        "TecProgramacaoII/ExemploAdapter/src",
+        "TecProgramacaoII/ExemploObserver/src"
     ],
     "java.compile.nullAnalysis.mode": "automatic",
     "java.project.referencedLibraries": [
