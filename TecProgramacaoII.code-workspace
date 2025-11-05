@@ -1,0 +1,31 @@
+{
+  "folders": [
+    { "path": "." },
+    { "path": "TecProgramacaoII/Aula_Revisao" },
+    { "path": "TecProgramacaoII/ExemploAdapter" },
+    { "path": "TecProgramacaoII/ExemploDecorator" },
+    { "path": "TecProgramacaoII/ExemploObserver" },
+    { "path": "TecProgramacaoII/ExemploSingleton" },
+    { "path": "TecProgramacaoII/ExemplosSOLID" },
+    { "path": "TecProgramacaoII/ExercicioSOLID" }
+  ],
+  "settings": {
+    "java.configuration.runtimes": [
+      {
+        "name": "JavaSE-21",
+        "path": "/home/usuario/.sdkman/candidates/java/21.0.8-tem",
+        "default": true
+      }
+    ],
+    "java.project.referencedLibraries": [
+      "lib/**/*.jar"
+    ],
+    "java.project.explorer.showNonProjectFiles": false,
+    "java.compile.nullAnalysis.mode": "automatic"
+  },
+  "extensions": {
+    "recommendations": [
+      "vscjava.vscode-java-pack"
+    ]
+  }
+}
