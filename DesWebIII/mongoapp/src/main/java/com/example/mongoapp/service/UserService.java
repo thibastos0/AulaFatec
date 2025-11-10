@@ -20,26 +20,52 @@ public class UserService {
     }
 
     public Optional<User> buscarPorId(String id){
+
+        if (id == null) {
+            throw new IllegalArgumentException("ID vazio.");
+        }
         return userRepository.findById(id);
     }
 
     public User salvar(User user) {
+        if (user == null) {
+            throw new IllegalArgumentException("Dados do usuário não podem ser nulos");
+        }
         return userRepository.save(user);
     }
 
     public User atualizar(String id, User userAtualizado){
+        
+        if (id == null) {
+            throw new IllegalArgumentException("ID vazio.");
+        }
+        
         Optional<User> userExistente = userRepository.findById(id);
-        if (userExistente.isPresent()) {
-            User user = userExistente.get();
-            user.setName(userAtualizado.getName());
-            user.setMail(userAtualizado.getMail());
-            return userRepository.save(user);
-        } else {
+
+        if (userExistente.isEmpty()) {
             throw new RuntimeException("Usuário não encontrado com ID: " + id);
         }
+        
+        if (userAtualizado.getName() == null || userAtualizado.getName().isBlank()) {
+            throw new IllegalArgumentException("Nome não pode ser vazio");
+        }
+
+        if (userAtualizado.getMail() == null || userAtualizado.getMail().isBlank()) {
+            throw new IllegalArgumentException("E-mail não pode ser vazio");
+        }
+
+        User user = userExistente.get();
+        user.setName(userAtualizado.getName());
+        user.setMail(userAtualizado.getMail());
+            
+
+        return userRepository.save(user);
     }
 
     public void deletar(String id) {
+        if (id == null) {
+            throw new IllegalArgumentException("ID vazio.");
+        }
         userRepository.deleteById(id);
     }
 
