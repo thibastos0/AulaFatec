@@ -18,7 +18,15 @@
       }
     ],
     "java.project.referencedLibraries": [
-      "lib/**/*.jar"
+      "lib/**/*.jar",
+      "TecProgramacaoII/lib/**/*.jar",
+      "TecProgramacaoII/Aula_Revisao/lib/**/*.jar",
+      "TecProgramacaoII/ExemploAdapter/lib/**/*.jar",
+      "TecProgramacaoII/ExemploDecorator/lib/**/*.jar",
+      "TecProgramacaoII/ExemploObserver/lib/**/*.jar",
+      "TecProgramacaoII/ExemploSingleton/lib/**/*.jar",
+      "TecProgramacaoII/ExemplosSOLID/lib/**/*.jar",
+      "TecProgramacaoII/ExercicioSOLID/lib/**/*.jar"
     ],
     "java.project.explorer.showNonProjectFiles": false,
     "java.compile.nullAnalysis.mode": "automatic"
