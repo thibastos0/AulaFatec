@@ -7,7 +7,9 @@
     { "path": "TecProgramacaoII/ExemploObserver" },
     { "path": "TecProgramacaoII/ExemploSingleton" },
     { "path": "TecProgramacaoII/ExemplosSOLID" },
-    { "path": "TecProgramacaoII/ExercicioSOLID" }
+    { "path": "TecProgramacaoII/ExercicioSOLID" },
+    { "path": "TecProgramacaoII/TesteDeSoftwareLojaOnline" },
+    { "path": "TecProgramacaoII/TesteMovimentoFinanceiro"}
   ],
   "settings": {
     "java.configuration.runtimes": [
@@ -18,15 +20,7 @@
       }
     ],
     "java.project.referencedLibraries": [
-      "lib/**/*.jar",
-      "TecProgramacaoII/lib/**/*.jar",
-      "TecProgramacaoII/Aula_Revisao/lib/**/*.jar",
-      "TecProgramacaoII/ExemploAdapter/lib/**/*.jar",
-      "TecProgramacaoII/ExemploDecorator/lib/**/*.jar",
-      "TecProgramacaoII/ExemploObserver/lib/**/*.jar",
-      "TecProgramacaoII/ExemploSingleton/lib/**/*.jar",
-      "TecProgramacaoII/ExemplosSOLID/lib/**/*.jar",
-      "TecProgramacaoII/ExercicioSOLID/lib/**/*.jar"
+      "**/lib/**/*.jar"
     ],
     "java.project.explorer.showNonProjectFiles": false,
     "java.compile.nullAnalysis.mode": "automatic"
