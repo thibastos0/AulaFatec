@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class CalculadoraDePedidosTest {
 
     @Test
-    public void DeveCalcularValorTotalComDescontoCorretamente(){
+    void DeveCalcularValorTotalComDescontoCorretamente(){
         //Arrange
         CalculadoraDePedidos calculadoraDePedidos = new CalculadoraDePedidos();
         
@@ -19,7 +19,7 @@ public class CalculadoraDePedidosTest {
     }
 
     @Test
-    public void DeveRetornarExcecaoParaPrecoNegativo() {
+    void DeveRetornarExcecaoParaPrecoNegativo() {
         //Arrange
         CalculadoraDePedidos calculadoraDePedidos = new CalculadoraDePedidos();
 
@@ -29,7 +29,7 @@ public class CalculadoraDePedidosTest {
     }
 
     @Test
-    public void DeveRetornarExcecaoParaQuantidadeNegativo() {
+    void DeveRetornarExcecaoParaQuantidadeNegativo() {
         //Arrange
         CalculadoraDePedidos calculadoraDePedidos = new CalculadoraDePedidos();
 
@@ -39,7 +39,7 @@ public class CalculadoraDePedidosTest {
     }
 
     @Test
-    public void DeveRetornarExcecaoParaDoisValoresNegativos() {
+    void DeveRetornarExcecaoParaDoisValoresNegativos() {
         //Arrange
         CalculadoraDePedidos calculadoraDePedidos = new CalculadoraDePedidos();
 
@@ -49,7 +49,7 @@ public class CalculadoraDePedidosTest {
     }
 
     @Test
-    public void DeveRetornarExcecaoParaDescontoNegativo() {
+    void DeveRetornarExcecaoParaDescontoNegativo() {
         //Arrange
         CalculadoraDePedidos calculadoraDePedidos = new CalculadoraDePedidos();
 
@@ -59,7 +59,7 @@ public class CalculadoraDePedidosTest {
     }
 
     @Test
-    public void DeveRetornarValorZeroComQuantidadeZero() {
+    void DeveRetornarValorZeroComQuantidadeZero() {
         //Arrange
         CalculadoraDePedidos calculadoraDePedidos = new CalculadoraDePedidos();
 
@@ -72,7 +72,7 @@ public class CalculadoraDePedidosTest {
     }
 
     @Test
-    public void DeveRetornarValorZeroComPrecoZero() {
+    void DeveRetornarValorZeroComPrecoZero() {
         //Arrange
         CalculadoraDePedidos calculadoraDePedidos = new CalculadoraDePedidos();
 
@@ -84,7 +84,7 @@ public class CalculadoraDePedidosTest {
     }
 
     @Test
-    public void DeveRetornarPreçoSemDescontoComDescontoZero() {
+    void DeveRetornarPreçoSemDescontoComDescontoZero() {
         //Arrange
         CalculadoraDePedidos calculadoraDePedidos = new CalculadoraDePedidos();
 
@@ -97,7 +97,7 @@ public class CalculadoraDePedidosTest {
     }
 
     @Test
-    public void DeveRetornarPreçoZeroComDesconto100() {
+    void DeveRetornarPreçoZeroComDesconto100() {
         //Arrange
         CalculadoraDePedidos calculadoraDePedidos = new CalculadoraDePedidos();
 
@@ -109,7 +109,7 @@ public class CalculadoraDePedidosTest {
     }
 
     @Test
-    public void DeveCalcularCorretamenteComPrecoDecimal(){
+    void DeveCalcularCorretamenteComPrecoDecimal(){
         //Arrange
         CalculadoraDePedidos calculadoraDePedidos = new CalculadoraDePedidos();
 
@@ -121,7 +121,7 @@ public class CalculadoraDePedidosTest {
     }
 
     @Test
-    public void DeveCalcularCorretamenteComDescontoDecimal(){
+    void DeveCalcularCorretamenteComDescontoDecimal(){
         //Arrange
         CalculadoraDePedidos calculadoraDePedidos = new CalculadoraDePedidos();
 
@@ -133,17 +133,24 @@ public class CalculadoraDePedidosTest {
     }
 
     @Test
-    public void DeveRetornarTrueParaFreteGratis() {
+    void DeveRetornarTrueParaFreteGratis() {
+        //Arrange
         CalculadoraDePedidos calculadora = new CalculadoraDePedidos();
+        //Act
         double total = calculadora.calcularTotal(500.00, 1, 0.0); // total = 500
+        //Assert
         assertTrue(calculadora.isFreteGratis(total));
     }
 
     @Test
-    public void DeveRetornarFalseParaFreteCobrado() {
+    void DeveRetornarFalseParaFreteCobrado() {
+        //Arrange
         CalculadoraDePedidos calculadora = new CalculadoraDePedidos();
+        //Act
         double total = calculadora.calcularTotal(100.00, 2, 0.0); // total = 200
+        //Assert
         assertFalse(calculadora.isFreteGratis(total));
     }
+
 
 }

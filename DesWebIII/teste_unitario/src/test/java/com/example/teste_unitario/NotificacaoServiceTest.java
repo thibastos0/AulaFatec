@@ -21,3 +21,5 @@ public class NotificacaoServiceTest {
         Mockito.verify(mockEmail).enviar(Mockito.eq("teste@teste.com"), Mockito.eq("Assunto Importante"), Mockito.eq("Todo mundo tirou 10 no PI"));
     }
 }
+
+

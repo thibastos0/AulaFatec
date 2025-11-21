@@ -17,22 +17,44 @@ public class MovimentoFinanceiro {
 
     public int GeraID(int valorIncremento) {
 
+        if (valorIncremento < 0) {
+            throw new IllegalArgumentException("Valor de Incremento não pode ser negativo!");
+        }
         return this.ID + valorIncremento;
 
     }
 
     public Date GeraVencimento(Date dtEmissao) {
 
+        if (dtEmissao == null){
+            throw new NullPointerException("Data inválida!");
+        }
+
         Calendar cal = Calendar.getInstance();
         cal.setTime(dtEmissao);
         cal.add(Calendar.DATE, 10); // vencimento em 10 dias
+        while (!isDiaUtil(cal.getTime())){
+            cal.add(Calendar.DATE, 1);
+        }
         this.DataVencimento = cal.getTime();
 
         return this.DataVencimento;
 
     }
 
+    public boolean isDiaUtil(Date data){
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(data);
+
+        int diaSemana = cal.get(Calendar.DAY_OF_WEEK);
+        return diaSemana != Calendar.SATURDAY && diaSemana != Calendar.SUNDAY;
+    }
+
     public float CalculaJuros(float valorOriginal) {
+
+        if (valorOriginal < 0){
+            throw new IllegalArgumentException("O valor não pode ser negativo!");
+        }
 
         // Exemplo simples: 2% de juros fixos
         this.ValorJuros = valorOriginal * 0.02f;
@@ -43,6 +65,10 @@ public class MovimentoFinanceiro {
 
 
     public float CalculaValorPagamento(float valorOriginal, float valorJuros) {
+
+        if (valorOriginal < 0 || valorJuros < 0) {
+            throw new IllegalArgumentException("Os valores não podem ser negativos!");
+        }
 
         this.ValorPagamento = valorOriginal + valorJuros;
 

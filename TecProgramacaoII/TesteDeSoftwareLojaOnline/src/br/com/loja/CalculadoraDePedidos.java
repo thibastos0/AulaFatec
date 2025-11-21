@@ -6,7 +6,6 @@ public class CalculadoraDePedidos {
         if (precoUnitario < 0 || quantidade < 0 || descontoPercentual < 0) {
             throw new IllegalArgumentException("Valores negativos não são permitidos");
         }
-
         double subtotal = precoUnitario * quantidade;
         double desconto = subtotal * (descontoPercentual / 100);
         
