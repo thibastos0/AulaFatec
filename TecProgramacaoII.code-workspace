@@ -9,7 +9,8 @@
     { "path": "TecProgramacaoII/ExemplosSOLID" },
     { "path": "TecProgramacaoII/ExercicioSOLID" },
     { "path": "TecProgramacaoII/TesteDeSoftwareLojaOnline" },
-    { "path": "TecProgramacaoII/TesteMovimentoFinanceiro"}
+    { "path": "TecProgramacaoII/TesteMovimentoFinanceiro"},
+    { "path": "TecProgramacaoII/Prova_Autenticacao"}
   ],
   "settings": {
     "java.configuration.runtimes": [
